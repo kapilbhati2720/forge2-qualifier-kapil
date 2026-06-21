@@ -1,8 +1,7 @@
 ---
-
 name: status-report
 description: Generate concise engineering progress reports for hackathon and agent-driven software projects.
-------------------------------------------------------------------------------------------------------------
+---
 
 When asked for a status report, progress update, checkpoint, or summary:
 
