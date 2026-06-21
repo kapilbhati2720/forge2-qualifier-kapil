@@ -1,64 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
+use App\Models\Member;
 use Illuminate\Http\Request;
-
-class MemberController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+class MemberController extends Controller {
+    public function index() { return response()->json(Member::all()); }
+    public function store(Request $r) { return response()->json(Member::create($r->all()),201); }
+    public function update(Request $r, Member $member) { $member->update($r->all()); return response()->json($member); }
+    public function destroy(Member $member) { $member->delete(); return response()->json(null,204); }
 }

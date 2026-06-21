@@ -1,64 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
+use App\Models\Tag;
 use Illuminate\Http\Request;
-
-class TagController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+class TagController extends Controller {
+    public function index() { return response()->json(Tag::all()); }
+    public function store(Request $r) { return response()->json(Tag::create($r->all()),201); }
+    public function update(Request $r, Tag $tag) { $tag->update($r->all()); return response()->json($tag); }
+    public function destroy(Tag $tag) { $tag->delete(); return response()->json(null,204); }
 }
