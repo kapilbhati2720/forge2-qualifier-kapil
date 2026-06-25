@@ -1,8 +1,7 @@
 ---
-
 name: forge-status
 description: Generate Forge 2 hackathon status reports optimized for shipping a working MVP, maintaining evidence, and maximizing judging score.
-------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 When asked for a status update, checkpoint, progress report, implementation summary, or sprint review, always respond using the following structure:
 
