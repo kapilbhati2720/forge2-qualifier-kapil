@@ -201,7 +201,7 @@
       "ollama": {
         "baseUrl": "https://ollama.com",
         "api": "ollama",
-        "apiKey": ""apiKey": "YOUR-OLLAMA-CLOUD-API-KEY"",
+        "apiKey": "YOUR-OLLAMA-CLOUD-API-KEY",
         "models": [
           {
             "id": "kimi-k2.5:cloud",
