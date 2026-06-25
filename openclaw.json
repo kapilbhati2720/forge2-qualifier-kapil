@@ -160,14 +160,14 @@
     }
   },
   "channels": {
-    "slack": {
-      "enabled": true,
-      "botToken": "",
-      "appToken": "",
-      "groupPolicy": "open",
-      "capabilities": {
+  "slack": {
+        "enabled": true,
+        "botToken": { "source": "env", "provider": "default", "id": "SLACK_BOT_TOKEN" },
+        "appToken": { "source": "env", "provider": "default", "id": "SLACK_APP_TOKEN" },
+        "groupPolicy": "open",
+        "capabilities": {
         "interactiveReplies": true
-      }
+        }
     }
   },
   "agents": {
